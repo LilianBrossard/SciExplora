@@ -18,13 +18,20 @@ main
 
 header
 {
-    padding-bottom: 200px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-bottom: inset #234049 5px;
 }
 
 footer
 {
     border-top: outset #234049 5px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
 }
+
+
+
 
 aside
 {
@@ -32,17 +39,36 @@ aside
     top: 0;
     text-align: center;
     word-spacing: 3em;
-    background-color: #8a8a8a;
+    background-color: #a1c6d1;
     width: 100%;
-    height: 20px;
+    height: 28px;
     border: inset black 2px;
 }
+
 
 a
 {
     color: black;
     text-decoration: none;
 }
+
+aside > div > a
+{
+    color: rgb(216, 216, 93);
+}
+
+aside > div
+{
+    display: inline-block;
+    background-color: black;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+
+
+
+
 
 h1
 {
@@ -71,17 +97,22 @@ h3
 {
     font-size: 30px;
     text-align: left;
-    float: left;
 }
 
 
 
 section > article
 {
-    height: 350px;
+    display: flex;
+    margin: 20px 0;
+    height: auto;
     padding: 2em;
     background-color: #90b6c2;
-
+    border-radius: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: inset #234049 2px ;
+    border-right: inset #234049 2px ;
 }
 
 .cadriage
@@ -89,36 +120,74 @@ section > article
     background-color: #74aebb;
 }
 
-section > article > p
-{
-    clear: left;
-}
-
-article > img
-{
-    float: left;
-}
-
-iframe
-{
-    float: right;
-
-}
 
 hr
 {
     height: 5px;
     background-color: #234049;
     border: outset #234049 5px;
+    border-radius: 5px;
 }
 
-header > img
+
+
+.sommaire
 {
-    float: right;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
 }
+
+.banniere
+{
+    border-bottom: inset #234049 4px ;
+    border-right: inset #234049 4px ;
+}
+
+
 
 li
 {
-    list-style-image: url(images/atom.png);
+    list-style-image: url(images/atomicon.png);
     font-size: 25px;
+    padding: 2em;
+    padding-left: 0;
+}
+
+
+.niv1
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.niv2
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+iframe
+{
+    min-width: 560px;
+    border-radius: 10px;
+}
+
+
+.niv1:hover , .navhover:hover
+{
+    background-color: #a7c7d1;
+}
+
+.niv1, .navhover
+{
+    border-radius: 20px;
+}
+
+div > img
+{
+    border-radius: 50%;
 }
